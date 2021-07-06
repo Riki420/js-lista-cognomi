@@ -10,7 +10,7 @@ var userName
 do{
     userName =
     prompt('inserisci il tuo cognome').trim();
-    lastName.push(userName.toUpperCase());
+    lastName.push(userName.charAt(0).toUpperCase() + userName.slice(1));
 } while(!userName);
 
 
@@ -32,7 +32,7 @@ if(isName){
     lastName.sort();
 }
 
-var listName = ''
+var listName = '';
 
 var i = 0; 
 while(i <= lastName.length){
@@ -42,7 +42,7 @@ while(i <= lastName.length){
 
 
 
-document.getElementById('display').innerHTML = listName;
+document.getElementById('display').innerHTML = listName.charAt(0).toUpperCase() + listName.slice(1);
 
-
+lastName = listName;
 
