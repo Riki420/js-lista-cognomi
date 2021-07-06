@@ -33,8 +33,7 @@ while(i < lastName.length && !isName){
 
 if(isName){
     lastName.sort();
-    document.getElementById('display').innerHTML = lastName;
-    
+    var listPrint = document.getElementById('display').innerHTML = '<li>' + lastName + '</li>';
 } 
 
 
