@@ -4,14 +4,13 @@
 // 4. scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
 
 
-var lastName = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli' ];
+var lastName = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];
 var userName
 
 do{
-    userName = prompt('inserisci il tuo cognome').trim();
-    lastName.push(userName);
-    
-    console.table(lastName);
+    userName =
+    prompt('inserisci il tuo cognome').trim();
+    lastName.push(userName.toUpperCase());
 } while(!userName);
 
 
@@ -21,9 +20,7 @@ var isName = false;
 
 var i = 0;
 while(i < lastName.length && !isName){
-    console.log('entro ed eseguo il ciclo');
-
-    if(userName.toUpperCase() === lastName[i].toUpperCase()){
+    if(userName){
         isName = true;
     }
     i++;
@@ -33,7 +30,19 @@ while(i < lastName.length && !isName){
 
 if(isName){
     lastName.sort();
-    var listPrint = document.getElementById('display').innerHTML = '<li>' + lastName + '</li>';
-} 
+}
+
+var listName = ''
+
+var i = 0; 
+while(i <= lastName.length){
+    listName += '<li>' + lastName[i] + '</li>';
+    i++;
+}
+
+
+
+document.getElementById('display').innerHTML = listName;
+
 
 
