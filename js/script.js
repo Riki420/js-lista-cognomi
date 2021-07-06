@@ -42,7 +42,7 @@ while(i <= lastName.length){
 
 
 
-document.getElementById('display').innerHTML = listName.charAt(0).toUpperCase() + listName.slice(1);
+document.getElementById('list').innerHTML = listName.charAt(0).toUpperCase() + listName.slice(1);
 
 lastName = listName;
 
