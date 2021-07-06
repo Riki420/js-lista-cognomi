@@ -46,3 +46,6 @@ document.getElementById('list').innerHTML = listName.charAt(0).toUpperCase() + l
 
 lastName = listName;
 
+var message = 'il tuo cognome è nella posizione: ' + listName[i];
+
+document.getElementById('display').innerHTML = message;
