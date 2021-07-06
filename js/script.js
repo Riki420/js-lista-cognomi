@@ -4,11 +4,37 @@
 // 4. scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
 
 
-var surName = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli' ];
-
+var lastName = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli' ];
+var userName
 
 do{
     userName = prompt('inserisci il tuo cognome').trim();
+    lastName.push(userName);
+    
+    console.table(lastName);
 } while(!userName);
+
+
+// Check
+
+var isName = false;
+
+var i = 0;
+while(i < lastName.length && !isName){
+    console.log('entro ed eseguo il ciclo');
+
+    if(userName.toUpperCase() === lastName[i].toUpperCase()){
+        isName = true;
+    }
+    i++;
+}
+
+
+
+if(isName){
+    lastName.sort();
+    document.getElementById('display').innerHTML = lastName;
+    
+} 
 
 
